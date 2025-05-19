@@ -1,183 +1,71 @@
-In this project, let's build a **Nxt Trendz - Cart Features** by applying the concepts we have learned till now.
+**E-Commerce Web Application:**
 
-### Refer to the video below:
+As part of my web development learning journey, I built a full-featured e-commerce web application to gain practical experience with React.js, client-side routing, API handling, and secure user authentication. The app simulates a real-world online shopping platform inspired by Amazon and Flipkart, and focuses on creating a seamless and secure user experience.
 
-<br/>
-<div style="text-align: center;">
-  <video style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12);outline:none;" loop="true" autoplay="autoplay" controls="controls" muted>
-    <source src="https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-output.mp4" type="video/mp4">
-  </video>
-</div>
-<br/>
+**Objective:**
 
-### Design Files
+To design and develop a responsive and secure frontend application that allows users to browse products, view product details, and manage user authentication—while applying concepts such as React components, routing, API integration, and JWT-based authentication.
 
-<details>
-<summary>Click to view</summary>
+**What I Built:**
 
-- [Extra Small (Size < 576px) and Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-sm-output-v0.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-lg-output.png)
+Login System
 
-</details>
+Designed a secure login form using controlled inputs in React.
 
-### Set Up Instructions
+Implemented authentication using JWT tokens for secure login sessions.
 
-<details>
-<summary>Click to view</summary>
+Protected routes to restrict access to authenticated users only.
 
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
-</details>
+Product Listing Page
 
-### Completion Instructions
+Fetched data dynamically from a REST API.
 
-<details>
-<summary>Functionality to be added</summary>
-<br/>
+Displayed a responsive grid of products using reusable React components.
 
-The app must have the following functionalities
+Included loading states and conditional rendering for a better user experience.
 
-- When an unauthenticated user tries to access the **Cart** Route, then the page should be navigated to **Login** Route
+Product Details Page
 
-- Following are the features to be implemented
+Rendered detailed product information based on user selection using React Router params.
 
-  - Feature 1
+Used dynamic routing to navigate from product list to individual product view.
 
-    - When an authenticated user tries to add the same product multiple times
-      - The quantity of the product should be updated accordingly, and the count of the cart items in the header should be remained same
+Persistent Sessions
 
-  - Feature 2
+Stored JWT tokens and user data in localStorage to maintain login state across sessions.
 
-    - The total amount and number of items in the cart should be displayed in the **Cart** Route
+Implemented logout functionality to clear tokens securely.
 
-  - Feature 3
+**What I Learned:**
 
-    - In each cart item in the cart
-      - When the plus icon is clicked, then the quantity of the product should be incremented by one
-      - When the minus icon is clicked, then the quantity of the product should be decremented by one
-      - When the quantity of the product is one and the minus icon is clicked, then the respective product should be removed from the cart
-      - Based on the quantity of the product, the product price and the Cart Summary, i.e the total cost should be updated accordingly
+React JS fundamentals: component architecture, props, hooks, and state management.
 
-  - Feature 4
+Routing with react-router-dom to handle multi-page navigation in a single-page app.
 
-    - When an authenticated user clicks on the remove button, cart item should be removed from the cart list
+Secure Authentication using JWT and route protection.
 
-  - Feature 5
+Real-time UI updates using React’s reactive DOM and conditional rendering.
 
-    - When an authenticated user clicks on the **Remove All** button, all the cart items should be removed from the cart and [Empty Cart View](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-empty-cart-view.png) should be displayed
+Importance of code reusability, clean file structure, and modular components.
 
-- The `CartContext` has an object as a value with the following properties
-  - `cartList` - this key stores the cart items
-  - `removeAllCartItems` - this method is used to remove all the cart items in the `cartList`
-  - `addCartItem` - this method adds the cart item to the `cartList`
-  - `removeCartItem` - this method removes the cart item from the `cartList`
-  - `incrementCartItemQuantity` - this method increases the quantity of a product in the `cartList`
-  - `decrementCartItemQuantity` - this method decreases the quantity of a product in the `cartList`
+How to integrate external APIs and manage asynchronous data flow with fetch.
 
-</details>
+**Technologies Used:**
 
-<details>
-<summary>Components Structure</summary>
+React JS – Core framework for building user interfaces
 
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-component-structure-breakdown.png" alt="component structure breakdown" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
+JavaScript (ES6+) – Application logic and interactivity
 
-</details>
+CSS & Bootstrap – Styling and responsive design
 
-<details>
-<summary>Implementation Files</summary>
-<br/>
+React Router – Client-side routing between pages
 
-Use these files to complete the implementation:
+JWT (JSON Web Token) – Authentication and session handling
 
-- `src/App.js`
-- `src/components/Cart/index.js`
-- `src/components/Cart/index.css`
-- `src/components/CartItem/index.js`
-- `src/components/CartItem/index.css`
-- `src/components/CartSummary/index.js`
-- `src/components/CartSummary/index.css`
-</details>
+REST API – Data interaction and backend simulation
 
-### Quick Tips
+LocalStorage – Persistent storage of session tokens
 
-<details>
-<summary>Click to view</summary>
-<br>
+**Project Outcome:**
 
-- The `line-height` CSS property sets the height of a line box. It's commonly used to set the distance between lines of text
-
-  ```
-  line-height: 1.5;
-  ```
-
-    <br/>
-    <img src="https://assets.ccbp.in/frontend/react-js/line-height-img.png" alt="line height" style="width:90%; max-width: 600px;"/>
-
-- The array method `find()` returns the first item's value that satisfies the provided testing function. If no item is found, it returns `undefined`
-
-  **Syntax**: `arr.find(Testing Function)`
-
-</details>
-
-### Important Note
-
-<details>
-<summary>Click to view</summary>
-
-<br/>
-
-**The following instructions are required for the tests to pass**
-
-- `BsPlusSquare`, `BsDashSquare` icons from `react-icons` should be used for **plus** and **minus** buttons in cart item
-- The Cart Item should consist of two HTML button elements with data-testid attribute values as **plus** and **minus** respectively
-- `AiFillCloseCircle` icon from react-icons should be used for **remove** button in cartItem
-- The Cart Item should consist of an HTML button element with data-testid attribute values as **remove**
-- The product image in **Cart Item** Route should have the alt as `title` of the product
-
-- Prime User credentials
-
-  ```text
-   username: rahul
-   password: rahul@2021
-  ```
-
-- Non-Prime User credentials
-
-  ```text
-   username: raja
-   password: raja@2021
-  ```
-
-</details>
-
-### Resources
-
-<details>
-<summary>Colors</summary>
-
-<br/>
-
-<div style="background-color: #0b69ff; width: 150px; padding: 10px; color: white">Hex: #0b69ff</div>
-<div style="background-color: #171f46; width: 150px; padding: 10px; color: white">Hex: #171f46</div>
-<div style="background-color: #616e7c; width: 150px; padding: 10px; color: white">Hex: #616e7c</div>
-<div style="background-color: #ffffff; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
-
-</details>
-
-<details>
-<summary>Font-families</summary>
-
-- Roboto
-
-</details>
-
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
+This project helped me solidify my frontend skills and gain hands-on experience in building real-world applications. It reflects my ability to develop responsive, secure, and interactive web apps using modern frontend technologies and best practices.
